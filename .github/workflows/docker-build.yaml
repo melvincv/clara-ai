@@ -69,6 +69,7 @@ jobs:
         id: build
         with:
           context: .
+          registry: ${{ env.REGISTRY }}
           push: true
           labels: ${{ steps.meta.outputs.labels }}
           outputs: type=image,name=${{ env.FULL_IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=true
