@@ -39,7 +39,7 @@ jobs:
         with:
           images: ${{ env.FULL_IMAGE_NAME }}
           tags: |
-            type=raw,value=main
+            type=raw,value=dev
             type=ref,event=tag
           flavor: |
             latest=false
