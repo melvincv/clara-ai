@@ -1,10 +1,9 @@
 name: Create and publish Docker images to GitHub Registry
 
 on:
-  workflow_run:
-    workflows: ["Release"]
-    types:
-      - completed
+  push:
+    branches:
+      - 'releases/**'
 
 env:
   REGISTRY: ghcr.io
