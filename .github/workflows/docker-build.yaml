@@ -43,7 +43,7 @@ jobs:
           images: ${{ env.FULL_IMAGE_NAME }}
           tags: |
             type=raw,value=dev
-            type=ref,event=tag
+            type=raw,value=${{ github.ref_name }}
           flavor: |
             latest=false
 
